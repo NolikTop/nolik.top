@@ -7,14 +7,15 @@ import {
     CardContent,
     CardMedia,
     Grid,
-    makeStyles,
+    makeStyles, Tooltip,
     Typography
 } from "@material-ui/core";
 import {Rating} from "@material-ui/lab";
 import CodeIcon from '@material-ui/icons/Code';
 
 interface SkillCardProps{
-    skill: SkillInfo
+    skill: SkillInfo,
+    onOpenProjectDialog: () => void
 }
 
 const useStyles = makeStyles({
@@ -34,23 +35,25 @@ const useStyles = makeStyles({
     }
 });
 
-const SkillCard: React.FC<SkillCardProps> = ({skill}) => {
+const SkillCard: React.FC<SkillCardProps> = ({skill, onOpenProjectDialog}) => {
     const classes = useStyles();
 
     return (
         <Card>
             <CardMedia style={{backgroundColor: skill.color}} className={classes.media}>
                 <div className={classes.avatarZone}>
-                    <Avatar src={skill.image} className={classes.avatar} />
+                    <Avatar variant="square" src={skill.image} className={classes.avatar} />
                 </div>
             </CardMedia>
             <CardContent>
                 <Grid container>
                     <Grid item xs>
-                        <Typography variant="h5">{skill.name}</Typography>
+                        <Typography variant="h5">
+                            {skill.name} <Typography component="span" variant="subtitle2" color="textSecondary">с {skill.started}</Typography>
+                        </Typography>
                     </Grid>
                     <Grid item>
-                        <Rating name="Уровень познания" value={skill.rate} readOnly />
+                        <Rating value={skill.rate} readOnly />
                     </Grid>
                 </Grid>
 
@@ -59,7 +62,7 @@ const SkillCard: React.FC<SkillCardProps> = ({skill}) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="large" color="primary" startIcon={<CodeIcon />}>Проекты</Button>
+                <Button size="large" color="primary" startIcon={<CodeIcon />} onClick={onOpenProjectDialog}>Проекты</Button>
             </CardActions>
         </Card>
     );
