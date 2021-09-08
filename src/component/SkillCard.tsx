@@ -12,6 +12,7 @@ import {
 } from "@material-ui/core";
 import {Rating} from "@material-ui/lab";
 import CodeIcon from '@material-ui/icons/Code';
+import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
 
 interface SkillCardProps{
     skill: SkillInfo,
@@ -35,8 +36,34 @@ const useStyles = makeStyles({
     }
 });
 
+function getYearsForm(years: number): string{
+    switch (years) {
+        case 11:
+        case 12:
+            return 'лет';
+        default:
+            switch (years % 10) {
+                case 1:
+                    return 'год';
+                case 2:
+                case 3:
+                case 4:
+                    return 'года';
+                default:
+                    return 'лет';
+            }
+    }
+}
+
 const SkillCard: React.FC<SkillCardProps> = ({skill, onOpenProjectDialog}) => {
     const classes = useStyles();
+
+    let years: number = 0;
+    if(skill.started) {
+        const now = new Date();
+        const yearsDate = new Date(now.getTime() - skill.started.getTime());
+        years = yearsDate.getUTCFullYear() - 1970;
+    }
 
     return (
         <Card>
@@ -49,11 +76,11 @@ const SkillCard: React.FC<SkillCardProps> = ({skill, onOpenProjectDialog}) => {
                 <Grid container>
                     <Grid item xs>
                         <Typography variant="h5">
-                            {skill.name} <Typography component="span" variant="subtitle2" color="textSecondary">с {skill.started}</Typography>
+                            {skill.name} {skill.started && <Typography component="span" variant="subtitle1" color="textSecondary">{years} {getYearsForm(years)}</Typography>}
                         </Typography>
                     </Grid>
                     <Grid item>
-                        <Rating value={skill.rate} readOnly />
+                        <Rating icon={<EmojiObjectsIcon />} value={skill.rate} readOnly />
                     </Grid>
                 </Grid>
 

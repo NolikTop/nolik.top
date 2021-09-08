@@ -14,6 +14,7 @@ import {ModalProps} from "@material-ui/core/Modal";
 import CloseIcon from "@material-ui/icons/Close";
 import SkillInfo from "../data/SkillInfo";
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
+import {Github} from "mdi-material-ui";
 
 const useStyles = makeStyles(theme => createStyles({
     root: {
@@ -41,16 +42,22 @@ const SkillProjectsDialog: React.FC<SkillProjectsDialogProps> = ({onClose, skill
             list.push(
                 <ListItem key={project.name}>
                     <ListItemAvatar>
-                        <Avatar src={project.image}/>
+                        {project.image ?
+                            <Avatar src={project.image}/> :
+                            <Avatar>{project.icon}</Avatar>
+                        }
                     </ListItemAvatar>
                     <ListItemText primary={project.name} secondary={project.type} />
                     <ListItemSecondaryAction>
-                        <IconButton href={project.url} target="_blank" color="primary"><OpenInNewIcon /></IconButton>
+                        {project.github && <IconButton href={project.github} target="_blank" color="primary"><Github /></IconButton>}
+                        {project.url && <IconButton href={project.url} target="_blank" color="primary"><OpenInNewIcon /></IconButton>}
                     </ListItemSecondaryAction>
                 </ListItem>
             )
         }
     }
+
+    const closeOnClick = () => onClose({}, "backdropClick");
 
     return (
         <Dialog
@@ -62,7 +69,7 @@ const SkillProjectsDialog: React.FC<SkillProjectsDialogProps> = ({onClose, skill
         >
             <DialogTitle>
                 <Hidden smUp>
-                    <IconButton edge="start" color="inherit" onClick={() => onClose({}, "backdropClick")} aria-label="close">
+                    <IconButton edge="start" color="inherit" onClick={closeOnClick} aria-label="close">
                         <CloseIcon />
                     </IconButton>
                 </Hidden>

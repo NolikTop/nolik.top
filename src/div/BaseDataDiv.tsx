@@ -12,6 +12,7 @@ import {
 } from "@material-ui/core";
 import EventIcon from '@material-ui/icons/Event';
 import SchoolIcon from '@material-ui/icons/School';
+import NolikTop400x400Logo from "../img/noliktop400x400.jpeg";
 
 const useStyles = makeStyles(() => ({
     avatar: {
@@ -25,7 +26,7 @@ const useStyles = makeStyles(() => ({
 
 const BaseDataDiv: React.FC = () => {
     const classes = useStyles();
-    const avatar = "https://sun9-2.userapi.com/s/v1/ig2/qph9z4MDC0CaDVRD_gVIvqMezxXYPYEctoFS2UT7WASknXbqJYTCSas2Bq2l3xhwUCgn6A9Q3UwfLOwpfGH1DgB7.jpg?size=400x400&quality=96&crop=205,303,866,866&ava=1"; //400x400
+    const avatar = NolikTop400x400Logo; //400x400
     //const avatar = "https://sun9-2.userapi.com/s/v1/ig2/hYexATin3e5XDJNnUJBwZRzauP2a7T5cODAxY0HxNX_nNrZ0OF8ZmltV_-YHLEvzjFQEb4xFHghOqQCY5YME5aCd.jpg?size=200x200&quality=96&crop=205,303,866,866&ava=1"; //200x200
 
     return (

@@ -11,8 +11,7 @@ const SkillsDiv: React.FC = () => {
     const openSkill = (skill: SkillInfo) => () => {
         setOpenedSkill(skill);
     }
-    const closeSkill = () => () => {
-        console.log("close skill");
+    const closeSkill = () => {
         setOpenedSkill(null);
     }
 
@@ -31,7 +30,7 @@ const SkillsDiv: React.FC = () => {
             <br />
             <Typography variant="h3" align="center">Умения</Typography>
             <br />
-            <Grid container>
+            <Grid container spacing={3}>
                 {cards}
             </Grid>
             <br />
