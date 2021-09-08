@@ -22,8 +22,8 @@ const Skills: SkillInfo[] = [
         rate: 4,
         description: (
             <span>Первый изучаемый мной язык программирования.
-                На PHP писал либо cli приложения (сервера Minecraft Bedrock Edition
-                на <Link href="https://github.com/pmmp/PocketMine-MP" target="_blank">PMMP</Link>-based ядрах), либо
+                На PHP писал cli приложения (сервера Minecraft Bedrock Edition
+                на <Link href="https://github.com/pmmp/PocketMine-MP" target="_blank">PMMP</Link>-based ядрах),
                 API (на своем фреймворке <Link href="https://github.com/GreenWix/prismaFrame" target="_blank">prismaFrame</Link>).
             </span>
         ),
