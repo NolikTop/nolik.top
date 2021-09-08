@@ -37,7 +37,8 @@ const Skills: SkillInfo[] = [
             type: "Мини-игры",
             url: "https://greenwix.fun",
             image: GreenWixLogo
-        }]
+        }],
+        tags: ["prismaFrame", "PMMP"]
     },{
         name: "TypeScript",
         color: "#4da2db",
@@ -67,27 +68,8 @@ const Skills: SkillInfo[] = [
             type: "Лендинг (на Material-UI)",
             url: "https://king-cobra.ru",
             image: KingCobraLogo
-        }]
-    },{
-        name: "C#",
-        color: "#749c7a",
-        image: CsharpLogo,
-        rate: 2,
-        description: (
-            <span>
-                На этом языке я писал менеджер серверов и библиотеку для бинарной сериализации данных
-            </span>
-        ),
-        projects: [{
-            name: "binary",
-            type: "Библиотека для бинарной сериализации данных",
-            github: "https://github.com/InStory/binary",
-            icon: <LibraryBooksIcon color="primary" />
-        },{
-            name: "Центральный менеджер серверов Minecraft (GreenWix)",
-            type: "Содержит в себе много разной кросс-серверной логики, в том числе репорт-систему (с системой слежки за игроками)",
-            image: GreenWixLogo
-        },]
+        }],
+        tags: ["Material Design", "Material-UI", "React"]
     },{
         name: "Go",
         color: "#94DFD8",
@@ -95,7 +77,7 @@ const Skills: SkillInfo[] = [
         rate: 2,
         description: (
             <span>
-                На Go я пишу TCP сервера
+                На Go писал только менеджеры серверов и сервис для слежки за состоянием серверов
             </span>
         ),
         projects: [{
@@ -112,7 +94,29 @@ const Skills: SkillInfo[] = [
             name: "ServerManager (GreenWix)",
             type: "Менеджер серверов MineBattles, BuildBattle, MurderMystery. Умеет распределять игроков по серверам, запускать/отключать сервера",
             image: GreenWixLogo
-        },]
+        }],
+        tags: []
+    },{
+        name: "C#",
+        color: "#749c7a",
+        image: CsharpLogo,
+        rate: 2,
+        description: (
+            <span>
+
+            </span>
+        ),
+        projects: [{
+            name: "binary",
+            type: "Библиотека для бинарной сериализации данных",
+            github: "https://github.com/InStory/binary",
+            icon: <LibraryBooksIcon color="primary" />
+        },{
+            name: "Центральный менеджер серверов Minecraft (GreenWix)",
+            type: "Содержит в себе много разной кросс-серверной логики, в том числе репорт-систему (с системой слежки за игроками)",
+            image: GreenWixLogo
+        }],
+        tags: []
     },{
         name: "JavaScript",
         color: "#FBF4CA",
@@ -139,7 +143,8 @@ const Skills: SkillInfo[] = [
             type: "Личный кабинет (JS, на Materialize)",
             url: "https://account.greenwix.fun",
             image: GreenWixLogo
-        }]
+        }],
+        tags: ["Materialize", "VKUI"]
     },
 ];
 

@@ -7,7 +7,8 @@ export default interface SkillInfo{
     image: string,
     rate: 0|1|2|3|4|5,
     description: React.ReactNode,
-    projects: SkillProject[]
+    projects: SkillProject[],
+    tags: string[]
 }
 
 export interface SkillProject{

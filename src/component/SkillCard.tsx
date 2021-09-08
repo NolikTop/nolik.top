@@ -5,7 +5,7 @@ import {
     Card,
     CardActions,
     CardContent,
-    CardMedia,
+    CardMedia, Chip,
     Grid,
     makeStyles, Tooltip,
     Typography
@@ -65,6 +65,15 @@ const SkillCard: React.FC<SkillCardProps> = ({skill, onOpenProjectDialog}) => {
         years = yearsDate.getUTCFullYear() - 1970;
     }
 
+    const tags = [];
+    for(const tag of skill.tags){
+        tags.push(
+            <Grid item>
+                <Chip label={tag} />
+            </Grid>
+        )
+    }
+
     return (
         <Card>
             <CardMedia style={{backgroundColor: skill.color}} className={classes.media}>
@@ -87,6 +96,15 @@ const SkillCard: React.FC<SkillCardProps> = ({skill, onOpenProjectDialog}) => {
                 <Typography variant="body1" color="textSecondary">
                     {skill.description}
                 </Typography>
+
+                {tags.length > 0 &&
+                    <>
+                        <br />
+                        <Grid container spacing={1}>
+                            {tags}
+                        </Grid>
+                    </>
+                }
             </CardContent>
             <CardActions>
                 <Button size="large" color="primary" startIcon={<CodeIcon />} onClick={onOpenProjectDialog}>Проекты</Button>
