@@ -20,6 +20,9 @@ const useStyles = makeStyles(theme => createStyles({
     root: {
         width: '100%',
     },
+    iconAvatar: {
+        backgroundColor: theme.palette.type === "light" ? "white" : "",
+    },
 }));
 
 interface SkillProjectsDialogProps{
@@ -44,7 +47,7 @@ const SkillProjectsDialog: React.FC<SkillProjectsDialogProps> = ({onClose, skill
                     <ListItemAvatar>
                         {project.image ?
                             <Avatar src={project.image}/> :
-                            <Avatar>{project.icon}</Avatar>
+                            <Avatar className={classes.iconAvatar}>{project.icon}</Avatar>
                         }
                     </ListItemAvatar>
                     <ListItemText primary={project.name} secondary={project.type} />

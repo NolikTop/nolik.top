@@ -2,7 +2,7 @@ import React from "react";
 import {
     Avatar,
     Card,
-    CardContent,
+    CardContent, createStyles,
     Grid,
     List,
     ListItem,
@@ -14,10 +14,13 @@ import EventIcon from '@material-ui/icons/Event';
 import SchoolIcon from '@material-ui/icons/School';
 import NolikTop400x400Logo from "../img/noliktop400x400.jpeg";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(theme => createStyles({
     avatar: {
         width: 250,
         height: 250
+    },
+    iconAvatar: {
+        backgroundColor: theme.palette.type === "light" ? "white" : "",
     },
     infoCard: {
         maxWidth: 450
@@ -41,7 +44,7 @@ const BaseDataDiv: React.FC = () => {
                         <List>
                             <ListItem>
                                 <ListItemAvatar>
-                                    <Avatar>
+                                    <Avatar className={classes.iconAvatar}>
                                         <SchoolIcon color="primary" />
                                     </Avatar>
                                 </ListItemAvatar>
@@ -49,7 +52,7 @@ const BaseDataDiv: React.FC = () => {
                             </ListItem>
                             <ListItem>
                                 <ListItemAvatar>
-                                    <Avatar>
+                                    <Avatar className={classes.iconAvatar}>
                                         <EventIcon color="primary" />
                                     </Avatar>
                                 </ListItemAvatar>

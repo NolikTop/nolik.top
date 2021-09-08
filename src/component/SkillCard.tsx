@@ -5,7 +5,7 @@ import {
     Card,
     CardActions,
     CardContent,
-    CardMedia, Chip,
+    CardMedia, Chip, createStyles,
     Grid,
     makeStyles, Tooltip,
     Typography
@@ -19,7 +19,7 @@ interface SkillCardProps{
     onOpenProjectDialog: () => void
 }
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => createStyles({
     avatar: {
         width: "auto",
         height: 80,
@@ -33,8 +33,8 @@ const useStyles = makeStyles({
     media: {
         height: 150,
         position: "relative"
-    }
-});
+    },
+}));
 
 function getYearsForm(years: number): string{
     switch (years) {
