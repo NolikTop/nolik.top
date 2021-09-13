@@ -9,6 +9,8 @@ import KingCobraLogo from "../img/kingcobra.jpeg";
 import NolikTopLogo from "../img/noliktop.jpeg";
 import PhpLogo from "../img/php.png";
 import CsharpLogo from "../img/csharp.png";
+import CppLogo from "../img/cpp.png";
+import PovezloPovezloLogo from "../img/povezlopovezlo.jpeg";
 
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import VisibilityIcon from '@material-ui/icons/Visibility';
@@ -25,6 +27,7 @@ const Skills: SkillInfo[] = [
                 На PHP писал cli приложения (сервера Minecraft Bedrock Edition
                 на <Link href="https://github.com/pmmp/PocketMine-MP" target="_blank">PMMP</Link>-based ядрах),
                 API (на своем фреймворке <Link href="https://github.com/GreenWix/prismaFrame" target="_blank">prismaFrame</Link>).
+                Фреймворки Laravel, Yii2 и подобные не учил, но планирую в будущем их познать
             </span>
         ),
         projects: [{
@@ -68,6 +71,11 @@ const Skills: SkillInfo[] = [
             type: "Лендинг (на Material-UI)",
             url: "https://king-cobra.ru",
             image: KingCobraLogo
+        },{
+            name: "Math Client",
+            type: "Фронтенд для Math Server (ищите его в разделе C++)",
+            github: "https://github.com/PovezloPovezlo/math_client",
+            image: PovezloPovezloLogo
         }],
         tags: ["Material Design", "Material-UI", "React"]
     },{
@@ -121,10 +129,10 @@ const Skills: SkillInfo[] = [
         name: "JavaScript",
         color: "#FBF4CA",
         image: JavaScriptLogo,
-        rate: 1,
+        rate: 2,
         description: (
             <span>
-                Вместо JavaScript я теперь использую TypeScript, однако ранее писал на нем.
+                Ранее писал на JavaScript, однако я теперь использую TypeScript.
                 Использовал фреймворки <Link href="https://materializecss.com/" target="_blank">Materialize</Link> и <Link href="https://github.com/VKCOM/VKUI" target="_blank">VKUI</Link>.
             </span>
         ),
@@ -144,7 +152,24 @@ const Skills: SkillInfo[] = [
             url: "https://account.greenwix.fun",
             image: GreenWixLogo
         }],
-        tags: ["Materialize", "VKUI"]
+        tags: ["Materialize", "React", "VKUI"]
+    },{
+        name: "C++",
+        color: "#6DB2F1",
+        image: CppLogo,
+        rate: 1,
+        description: (
+            <span>
+                Работал в команде с одногруппниками над коллоквиумом по дискретной математике. Создавали библиотеку для работы с длинными числами. Я был главным программистом, весь процесс выстраивал я.
+            </span>
+        ),
+        projects: [{
+            name: "Math Server",
+            type: "Математическая библиотека для работы с длинными числами и с идущим к ней веб-сервером (api и раздача фронта)",
+            github: "https://github.com/PovezloPovezlo/math_server",
+            image: PovezloPovezloLogo,
+        }],
+        tags: []
     },
 ];
 
