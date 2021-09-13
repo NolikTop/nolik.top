@@ -14,8 +14,6 @@ const useStyles = makeStyles(() => ({
 const Footer: React.FC = () => {
     const classes = useStyles();
 
-    //<Link href="https://ru.freepik.com/vectors/background">Background вектор создан(а) pikisuperstar - ru.freepik.com</Link>
-
     return (
         <Paper className={classes.footer}>
             <Typography color="textSecondary">&copy; 2021 NolikTop</Typography>
