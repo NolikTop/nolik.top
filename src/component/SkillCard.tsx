@@ -1,7 +1,7 @@
 import React from "react";
 import SkillInfo from "../data/SkillInfo";
 import {
-    Avatar, Button,
+    Avatar, Box, Button,
     Card,
     CardActions,
     CardContent,
@@ -78,7 +78,7 @@ const SkillCard: React.FC<SkillCardProps> = ({skill, onOpenProjectDialog}) => {
         <Card>
             <CardMedia style={{backgroundColor: skill.color}} className={classes.media}>
                 <div className={classes.avatarZone}>
-                    <Avatar variant="square" src={skill.image} className={classes.avatar} />
+                    <img src={skill.image} className={classes.avatar} alt={skill.name} />
                 </div>
             </CardMedia>
             <CardContent>
