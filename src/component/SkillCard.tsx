@@ -7,7 +7,7 @@ import {
     CardContent,
     CardMedia, Chip, createStyles,
     Grid,
-    makeStyles, Tooltip,
+    makeStyles,
     Typography
 } from "@material-ui/core";
 import {Rating} from "@material-ui/lab";

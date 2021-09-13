@@ -6,7 +6,7 @@ import {
     DialogTitle,
     Hidden,
     IconButton, List, ListItem, ListItemAvatar, ListItemSecondaryAction, ListItemText,
-    makeStyles, Typography,
+    makeStyles,
     useMediaQuery,
     useTheme
 } from "@material-ui/core";

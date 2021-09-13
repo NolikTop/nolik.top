@@ -8,7 +8,7 @@ import {
     ListItem,
     ListItemAvatar, ListItemText,
     makeStyles,
-    Typography
+    Typography, useMediaQuery, useTheme
 } from "@material-ui/core";
 import EventIcon from '@material-ui/icons/Event';
 import SchoolIcon from '@material-ui/icons/School';
@@ -24,20 +24,25 @@ const useStyles = makeStyles(theme => createStyles({
     },
     infoCard: {
         maxWidth: 450
+    },
+    root: {
+        width: "100% !important"
     }
 }));
 
 const BaseDataDiv: React.FC = () => {
     const classes = useStyles();
+    const theme = useTheme();
     const avatar = NolikTop400x400Logo; //400x400
-    //const avatar = "https://sun9-2.userapi.com/s/v1/ig2/hYexATin3e5XDJNnUJBwZRzauP2a7T5cODAxY0HxNX_nNrZ0OF8ZmltV_-YHLEvzjFQEb4xFHghOqQCY5YME5aCd.jpg?size=200x200&quality=96&crop=205,303,866,866&ava=1"; //200x200
+    const full = useMediaQuery(theme.breakpoints.down('xs'));
 
     return (
-        <Grid container spacing={3} justifyContent="center">
+        <Grid className={classes.root} container spacing={full ? 0 : 3} justifyContent="center">
             <Grid item>
                 <Avatar alt="Avatar" src={avatar} className={classes.avatar} />
             </Grid>
             <Grid item>
+                {full && <br />}
                 <Card className={classes.infoCard}>
                     <CardContent>
                         <Typography variant="h5">Айдан Миннегараев</Typography>
