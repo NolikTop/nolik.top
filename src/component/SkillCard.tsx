@@ -85,7 +85,7 @@ const SkillCard: React.FC<SkillCardProps> = ({skill, onOpenProjectDialog}) => {
                 <Grid container>
                     <Grid item xs>
                         <Typography variant="h5">
-                            {skill.name} {skill.started && <Typography component="span" variant="subtitle1" color="textSecondary">{years} {getYearsForm(years)}</Typography>}
+                            {skill.name}
                         </Typography>
                     </Grid>
                     <Grid item>

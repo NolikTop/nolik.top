@@ -52,7 +52,7 @@ const Skills: SkillInfo[] = [
             <span>
                 Люблю Material Design, поэтому писал только на
                 фреймворке <Link href="https://material-ui.com/ru/" target="_blank">Material-UI</Link>.
-                Использую <Link href="https://ru.reactjs.org/" target="_blank">React</Link>.
+                Использую <Link href="https://ru.reactjs.org/" target="_blank">React</Link>
             </span>
         ),
         projects: [{
@@ -111,10 +111,30 @@ const Skills: SkillInfo[] = [
         rate: 2,
         description: (
             <span>
-
+                Писал лабы и курсовые работы на этом языке, а также всякие прикольные вещи, некоторые из которых в опенсорсе
             </span>
         ),
         projects: [{
+            name: "Алгоритм Краскала",
+            type: "Курсовая работа",
+            github: "https://github.com/NolikTop/algstr_cw",
+            icon: <LibraryBooksIcon color="primary" />
+        },{
+            name: "Деревья (АВЛ)",
+            type: "Лабораторая работа",
+            github: "https://github.com/NolikTop/algstr_lab3",
+            icon: <LibraryBooksIcon color="primary" />
+        },{
+            name: "Сортировки",
+            type: "Лабораторая работа",
+            github: "https://github.com/NolikTop/algstr_lab2",
+            icon: <LibraryBooksIcon color="primary" />
+        },{
+            name: "Списочные структуры",
+            type: "Лабораторая работа",
+            github: "https://github.com/NolikTop/algstr_lab1",
+            icon: <LibraryBooksIcon color="primary" />
+        },{
             name: "binary",
             type: "Библиотека для бинарной сериализации данных",
             github: "https://github.com/InStory/binary",
@@ -133,7 +153,7 @@ const Skills: SkillInfo[] = [
         description: (
             <span>
                 Ранее писал на JavaScript, однако я теперь использую TypeScript.
-                Использовал фреймворки <Link href="https://materializecss.com/" target="_blank">Materialize</Link> и <Link href="https://github.com/VKCOM/VKUI" target="_blank">VKUI</Link>.
+                Использовал фреймворки <Link href="https://materializecss.com/" target="_blank">Materialize</Link> и <Link href="https://github.com/VKCOM/VKUI" target="_blank">VKUI</Link>
             </span>
         ),
         projects: [{
@@ -160,7 +180,7 @@ const Skills: SkillInfo[] = [
         rate: 1,
         description: (
             <span>
-                Работал в команде с одногруппниками над коллоквиумом по дискретной математике. Создавали библиотеку для работы с длинными числами. Я был главным программистом, весь процесс выстраивал я.
+                Работал в команде с одногруппниками над коллоквиумом по дискретной математике. Создавали библиотеку для работы с длинными числами. Я был главным программистом, весь процесс выстраивал я
             </span>
         ),
         projects: [{
