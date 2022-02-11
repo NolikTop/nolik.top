@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
 
     return (
         <Paper className={classes.footer}>
-            <Typography color="textSecondary">&copy; 2021 NolikTop</Typography>
+            <Typography color="textSecondary">&copy; 2022 NolikTop</Typography>
         </Paper>
         );
 };
