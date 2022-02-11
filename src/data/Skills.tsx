@@ -17,6 +17,32 @@ import VisibilityIcon from '@material-ui/icons/Visibility';
 
 const Skills: SkillInfo[] = [
     {
+        name: "Go",
+        color: "#94DFD8",
+        image: GolangLogo,
+        rate: 2,
+        description: (
+            <span>
+                На Go писал менеджеры серверов и сервис для слежки за состоянием серверов.
+            </span>
+        ),
+        projects: [{
+            name: "watcher",
+            type: "Следит за состоянием указанных серверов и уведомляет в случае падения одного или нескольких из них",
+            github: "https://github.com/NolikTop/watcher",
+            icon: <VisibilityIcon color="primary" />
+        },{
+            name: "binary",
+            type: "Библиотека для бинарной сериализации данных",
+            github: "https://github.com/GreenWix/binary",
+            icon: <LibraryBooksIcon color="primary" />
+        },{
+            name: "ServerManager (GreenWix)",
+            type: "Менеджер серверов MineBattles, BuildBattle, MurderMystery. Умеет распределять игроков по серверам, запускать/отключать сервера",
+            image: GreenWixLogo
+        }],
+        tags: []
+    },{
         name: "PHP",
         color: "#8993be",
         started: d(2016, 1, 3),
@@ -27,7 +53,6 @@ const Skills: SkillInfo[] = [
                 На PHP писал cli приложения (сервера Minecraft Bedrock Edition
                 на <Link href="https://github.com/pmmp/PocketMine-MP" target="_blank">PMMP</Link>-based ядрах),
                 API (на своем фреймворке <Link href="https://github.com/GreenWix/prismaFrame" target="_blank">prismaFrame</Link>).
-                Фреймворки Laravel, Yii2 и подобные не учил, но планирую в будущем их познать
             </span>
         ),
         projects: [{
@@ -78,32 +103,6 @@ const Skills: SkillInfo[] = [
             image: PovezloPovezloLogo
         }],
         tags: ["Material Design", "Material-UI", "React"]
-    },{
-        name: "Go",
-        color: "#94DFD8",
-        image: GolangLogo,
-        rate: 2,
-        description: (
-            <span>
-                На Go писал только менеджеры серверов и сервис для слежки за состоянием серверов
-            </span>
-        ),
-        projects: [{
-            name: "watcher",
-            type: "Следит за состоянием указанных серверов и уведомляет в случае падения одного или нескольких из них",
-            github: "https://github.com/GreenWix/watcher",
-            icon: <VisibilityIcon color="primary" />
-        },{
-            name: "binary",
-            type: "Библиотека для бинарной сериализации данных",
-            github: "https://github.com/GreenWix/binary",
-            icon: <LibraryBooksIcon color="primary" />
-        },{
-            name: "ServerManager (GreenWix)",
-            type: "Менеджер серверов MineBattles, BuildBattle, MurderMystery. Умеет распределять игроков по серверам, запускать/отключать сервера",
-            image: GreenWixLogo
-        }],
-        tags: []
     },{
         name: "C#",
         color: "#749c7a",
