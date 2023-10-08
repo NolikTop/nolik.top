@@ -1,7 +1,7 @@
 import React from "react";
 import SkillInfo from "../data/SkillInfo";
 import {
-    Avatar, Box, Button,
+    Button,
     Card,
     CardActions,
     CardContent,
@@ -36,34 +36,8 @@ const useStyles = makeStyles(theme => createStyles({
     },
 }));
 
-function getYearsForm(years: number): string{
-    switch (years) {
-        case 11:
-        case 12:
-            return 'лет';
-        default:
-            switch (years % 10) {
-                case 1:
-                    return 'год';
-                case 2:
-                case 3:
-                case 4:
-                    return 'года';
-                default:
-                    return 'лет';
-            }
-    }
-}
-
 const SkillCard: React.FC<SkillCardProps> = ({skill, onOpenProjectDialog}) => {
     const classes = useStyles();
-
-    let years: number = 0;
-    if(skill.started) {
-        const now = new Date();
-        const yearsDate = new Date(now.getTime() - skill.started.getTime());
-        years = yearsDate.getUTCFullYear() - 1970;
-    }
 
     const tags = [];
     for(const tag of skill.tags){
@@ -89,7 +63,7 @@ const SkillCard: React.FC<SkillCardProps> = ({skill, onOpenProjectDialog}) => {
                         </Typography>
                     </Grid>
                     <Grid item>
-                        <Rating icon={<EmojiObjectsIcon />} value={skill.rate} readOnly />
+                        <Rating icon={<EmojiObjectsIcon />} value={skill.rate} max={skill.rate} readOnly />
                     </Grid>
                 </Grid>
 

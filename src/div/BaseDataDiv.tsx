@@ -10,9 +10,10 @@ import {
     makeStyles,
     Typography, useMediaQuery, useTheme
 } from "@material-ui/core";
-import EventIcon from '@material-ui/icons/Event';
 import SchoolIcon from '@material-ui/icons/School';
 import NolikTop400x400Logo from "../img/noliktop400x400.jpeg";
+import VkLogo from "../img/vk.png";
+import InsertDriveFileIcon from "@material-ui/icons/InsertDriveFile";
 
 const useStyles = makeStyles(theme => createStyles({
     avatar: {
@@ -27,6 +28,9 @@ const useStyles = makeStyles(theme => createStyles({
     },
     root: {
         width: "100% !important"
+    },
+    noBottomPadding: {
+        paddingBottom: 0
     }
 }));
 
@@ -35,6 +39,7 @@ const BaseDataDiv: React.FC = () => {
     const theme = useTheme();
     const avatar = NolikTop400x400Logo; //400x400
     const full = useMediaQuery(theme.breakpoints.down('xs'));
+    const cvUrl = "https://docs.google.com/document/d/1qTGiGnUv9JuIyVqjItMgF2wbIAZDVLZ0Gm0el7Nwkws/edit?usp=sharing";
 
     return (
         <Grid className={classes.root} container spacing={full ? 0 : 3} justifyContent="center">
@@ -44,7 +49,7 @@ const BaseDataDiv: React.FC = () => {
             <Grid item>
                 {full && <br />}
                 <Card className={classes.infoCard}>
-                    <CardContent>
+                    <CardContent className={classes.noBottomPadding}>
                         <Typography variant="h5">Айдан Миннегараев</Typography>
                         <List>
                             <ListItem>
@@ -53,18 +58,28 @@ const BaseDataDiv: React.FC = () => {
                                         <SchoolIcon color="primary" />
                                     </Avatar>
                                 </ListItemAvatar>
-                                <ListItemText primary="СПбГЭТУ (ЛЭТИ), ИСИТ, 2 курс" />
+                                <ListItemText primary="СПбГЭТУ (ЛЭТИ), ИСИТ, 4 курс" />
                             </ListItem>
                             <ListItem>
                                 <ListItemAvatar>
                                     <Avatar className={classes.iconAvatar}>
-                                        <EventIcon color="primary" />
+                                        <img src={VkLogo} width={40} height={40} alt="vk" />
                                     </Avatar>
                                 </ListItemAvatar>
-                                <ListItemText primary={"Победитель VII национального чемпионата WorldSkills в компетенции \"Веб-дизайн и разработка - юниоры\""} />
+                                <ListItemText primary={"Младший программист-разработчик в ВКонтакте"} />
                             </ListItem>
                         </List>
                     </CardContent>
+                    <CardActions>
+                        <Button
+                            size="large"
+                            variant="contained"
+                            className={classes.root}
+                            startIcon={<InsertDriveFileIcon />}
+                            href={cvUrl}
+                            target="_blank"
+                        >Резюме</Button>
+                    </CardActions>
                 </Card>
             </Grid>
         </Grid>

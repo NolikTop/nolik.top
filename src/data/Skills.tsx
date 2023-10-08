@@ -17,6 +17,32 @@ import VisibilityIcon from '@material-ui/icons/Visibility';
 
 const Skills: SkillInfo[] = [
     {
+        name: "PHP (KPHP)",
+        color: "#8993be",
+        started: d(2016, 1, 3),
+        image: PhpLogo,
+        rate: 4,
+        description: (
+            <span>
+                Основной язык программирования на текущей работе. Пишу бекенд.
+                Также писал cli приложения (сервера Minecraft Bedrock Edition
+                на <Link href="https://github.com/pmmp/PocketMine-MP" target="_blank">PMMP</Link>-based ядрах),
+                API (на своем фреймворке <Link href="https://github.com/GreenWix/prismaFrame" target="_blank">prismaFrame</Link>).
+            </span>
+        ),
+        projects: [{
+            name: "prismaFrame",
+            type: "Фреймворк",
+            github: "https://github.com/GreenWix/prismaFrame",
+            icon: <LibraryBooksIcon color="primary" />
+        },{
+            name: "SkyWars,MineBattles,Hub (GreenWix)",
+            type: "Мини-игры",
+            url: "https://greenwix.fun",
+            image: GreenWixLogo
+        }],
+        tags: ["ВКонтакте", "prismaFrame", "PMMP"]
+    },{
         name: "Go",
         color: "#94DFD8",
         image: GolangLogo,
@@ -42,31 +68,6 @@ const Skills: SkillInfo[] = [
             image: GreenWixLogo
         }],
         tags: []
-    },{
-        name: "PHP",
-        color: "#8993be",
-        started: d(2016, 1, 3),
-        image: PhpLogo,
-        rate: 4,
-        description: (
-            <span>Первый изучаемый мной язык программирования.
-                На PHP писал cli приложения (сервера Minecraft Bedrock Edition
-                на <Link href="https://github.com/pmmp/PocketMine-MP" target="_blank">PMMP</Link>-based ядрах),
-                API (на своем фреймворке <Link href="https://github.com/GreenWix/prismaFrame" target="_blank">prismaFrame</Link>).
-            </span>
-        ),
-        projects: [{
-            name: "prismaFrame",
-            type: "Фреймворк",
-            github: "https://github.com/GreenWix/prismaFrame",
-            icon: <LibraryBooksIcon color="primary" />
-        },{
-            name: "SkyWars,MineBattles,Hub (GreenWix)",
-            type: "Мини-игры",
-            url: "https://greenwix.fun",
-            image: GreenWixLogo
-        }],
-        tags: ["prismaFrame", "PMMP"]
     },{
         name: "TypeScript",
         color: "#4da2db",
