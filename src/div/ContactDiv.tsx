@@ -1,7 +1,6 @@
 import React from "react";
 import {Button, ButtonGroup, MuiThemeProvider} from "@material-ui/core";
 import {Github, Vk, Telegram} from "mdi-material-ui";
-import {Instagram} from "@material-ui/icons";
 import Center from "../component/Center";
 import DarkTheme from "../theme/DarkTheme";
 
@@ -9,7 +8,6 @@ import DarkTheme from "../theme/DarkTheme";
 const ContactDiv: React.FC = () => {
     const vk = "https://vk.com/fr/";
     const telegram = "https://t.me/noliktop/";
-    const instagram = "https://instagram.com/noliktop/";
     const github = "https://github.com/noliktop/";
 
     return (
@@ -18,7 +16,6 @@ const ContactDiv: React.FC = () => {
                 <ButtonGroup aria-label="social media">
                     <Button size="large" href={vk} target="_blank"><Vk /></Button>
                     <Button size="large" href={telegram} target="_blank"><Telegram /></Button>
-                    <Button size="large" href={instagram} target="_blank"><Instagram /></Button>
                     <Button size="large" href={github} target="_blank"><Github /></Button>
                 </ButtonGroup>
             </Center>

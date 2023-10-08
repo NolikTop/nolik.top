@@ -1,23 +1,23 @@
 import React from "react";
-import {makeStyles} from "@material-ui/core";
+import {Grid, makeStyles} from "@material-ui/core";
 import "./bg.css";
 
 const useStyles = makeStyles(() => ({
     bg: {
-        background: "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
-        backgroundSize: "400% 400%",
-        animation: "gradient 15s ease infinite"
-    }
+        height: "100vh",
+        width: "100vw",
+    },
 }));
 
 const BigBgDiv: React.FC = ({children}) => {
     const classes = useStyles();
 
-
     return (
-        <div className={classes.bg}>
-            {children}
-        </div>
+        <Grid container className={classes.bg} justifyContent="center" alignItems="center">
+            <Grid item xs={12}>
+                {children}
+            </Grid>
+        </Grid>
     )
 }
 
