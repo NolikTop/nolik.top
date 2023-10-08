@@ -1,19 +1,26 @@
 import React from "react";
 import {
-    Avatar, Button,
-    Card, CardActions,
-    CardContent, createStyles,
+    Avatar,
+    Button,
+    Card,
+    CardActions,
+    CardContent,
+    createStyles,
     Grid,
     List,
     ListItem,
-    ListItemAvatar, ListItemText,
+    ListItemAvatar,
+    ListItemText,
     makeStyles,
-    Typography, useMediaQuery, useTheme
+    Typography,
+    useMediaQuery,
+    useTheme
 } from "@material-ui/core";
 import SchoolIcon from '@material-ui/icons/School';
 import NolikTop400x400Logo from "../img/noliktop400x400.jpeg";
 import VkLogo from "../img/vk.png";
 import InsertDriveFileIcon from "@material-ui/icons/InsertDriveFile";
+import WorkIcon from '@material-ui/icons/Work';
 
 const useStyles = makeStyles(theme => createStyles({
     avatar: {
@@ -44,38 +51,47 @@ const BaseDataDiv: React.FC = () => {
     return (
         <Grid className={classes.root} container spacing={full ? 0 : 3} justifyContent="center">
             <Grid item>
-                <Avatar alt="Avatar" src={avatar} className={classes.avatar} />
+                <Avatar alt="Avatar" src={avatar} className={classes.avatar}/>
             </Grid>
             <Grid item>
-                {full && <br />}
+                {full && <br/>}
                 <Card className={classes.infoCard}>
                     <CardContent className={classes.noBottomPadding}>
                         <Typography variant="h5">Айдан Миннегараев</Typography>
                         <List>
-                            <ListItem>
-                                <ListItemAvatar>
-                                    <Avatar className={classes.iconAvatar}>
-                                        <SchoolIcon color="primary" />
-                                    </Avatar>
-                                </ListItemAvatar>
-                                <ListItemText primary="СПбГЭТУ (ЛЭТИ), ИСИТ, 4 курс" />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemAvatar>
-                                    <Avatar className={classes.iconAvatar}>
-                                        <img src={VkLogo} width={40} height={40} alt="vk" />
-                                    </Avatar>
-                                </ListItemAvatar>
-                                <ListItemText primary={"Младший программист-разработчик в ВКонтакте"} />
-                            </ListItem>
-                        </List>
+                        <ListItem>
+                            <ListItemAvatar>
+                                <Avatar className={classes.iconAvatar}>
+                                    <img src={VkLogo} width={40} height={40} alt="vk"/>
+                                </Avatar>
+                            </ListItemAvatar>
+                            <ListItemText primary="Младший программист-разработчик ВКонтакте, команда Ленты"/>
+                        </ListItem>
+                        <ListItem>
+                            <ListItemAvatar>
+                                <Avatar className={classes.iconAvatar}>
+                                    <SchoolIcon color="primary"/>
+                                </Avatar>
+                            </ListItemAvatar>
+                            <ListItemText primary="СПбГЭТУ (ЛЭТИ), ИСИТ, 4 курс"/>
+                        </ListItem>
+                        <ListItem>
+                            <ListItemAvatar>
+                                <Avatar className={classes.iconAvatar}>
+                                    <WorkIcon color="primary"/>
+                                </Avatar>
+                            </ListItemAvatar>
+                            <ListItemText
+                                primary="1.5 года опыта коммерческой разработки и несколько лет работы над личными проектами"/>
+                        </ListItem>
+                    </List>
                     </CardContent>
                     <CardActions>
                         <Button
                             size="large"
                             variant="contained"
                             className={classes.root}
-                            startIcon={<InsertDriveFileIcon />}
+                            startIcon={<InsertDriveFileIcon/>}
                             href={cvUrl}
                             target="_blank"
                         >Резюме</Button>
